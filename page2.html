@@ -1,1 +1,155 @@
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopKro</title>
+    <style>
+        #logo {
+            margin: 10px 34px;
+        }
+
+        #logo img {
+            height: 59px;
+            margin: 3px 6px;
+        }
+
+        #navbar {
+            display: flex;
+            align-items: center;
+            position: relative;
+
+        }
+
+        #navbar ul {
+            display: flex;
+        }
+
+        #navbar::before {
+            content: "";
+
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+
+        }
+
+        #navbar ul li {
+            list-style: none;
+            font-size: 1.5rem;
+        }
+
+        #navbar ul li a {
+            color: white;
+            display: block;
+            padding: 3px 22px;
+            border-radius: 20px;
+            text-decoration: none;
+        }
+
+        #navbar ul li a:hover {
+            color: red;
+        }
+
+        #home {
+            display: flex;
+            flex-direction: column;
+            padding: 3px 200px;
+            height: 400px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #home::before {
+            content: "";
+            background: url('https://thumbs.dreamstime.com/b/wooden-blocks-online-shopping-symbols-shopping-cart-card-payment-delivery-truck-seller-over-internet-ecommerce-wooden-173711282.jpg') no-repeat center center/cover;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.8;
+        }
+
+        #home h1 {
+            color: black;
+            position: absolute;
+            top: 20%;
+            left: 55%;
+
+
+        }
+
+        #home p {
+            color: black;
+            position: absolute;
+            top: 35%;
+            left: 60%;
+            width: 350px;
+
+            font-size: 1.5rem;
+        }
+
+        .h-primary {
+            font-size: 2.8rem;
+            padding: 12px;
+        }
+
+        .btn {
+            padding: 6px 20px;
+            border: 2px solid red;
+            background-color: orange;
+            color: white;
+            margin: 17px;
+            font-size: 1.3rem;
+            border-radius: 10px;
+            position: absolute;
+            top: 70%;
+            left: 60%;
+            cursor: pointer;
+        }
+        #home .text {
+            font-size: 75px;
+            color: coral;
+            padding-bottom: 2500px;
+            padding-left: 160px;
+        }
+
+        .btn:hover {
+            background-color: grey;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="https://indian-retailer.s3.ap-south-1.amazonaws.com/s3fs-public/2021-03/e-commerce-definizione-cos-e.jpg"
+                alt="">
+        </div>
+        <ul>
+            <li class="item"><a href="a">Home</a></li>
+            <li class="item"><a href="a">Services</a></li>
+            <li class="item"><a href="a">About Us</a></li>
+            <li class="item"><a href="a">Contact Us</a></li>
+        </ul>
+
+    </nav>
+    <section id="home">
+     <img  src="https://indian-retailer.s3.ap-south-1.amazonaws.com/s3fs-public/2021-05/revenge%20shopping.jpg">
+     <p class="text">
+         Lets start shopping&excl;
+     </p>
+
+
+    </section>
+
+    <section class="services-container">
+        
+    </section>
+</body>
+
+</html>
