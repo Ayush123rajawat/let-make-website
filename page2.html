@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShopKro</title>
+    <link rel="stylesheet" href="/css/all.min.css">
     <style>
         #logo {
             margin: 10px 34px;
@@ -121,14 +122,21 @@
             background-color: grey;
         }
        .fcontainer {
-        display: flex;
+         display: flex;
+            
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        
      
        }
         .fcontainer .fitem img{
             
-            height: 400px;
-            width: 300px;
-            padding: 30px;
+            height: 300px;
+            width: 200px;
+            padding: 4rem;
+            margin: 1rem;
+            
             
         }
        
@@ -140,7 +148,19 @@
            color: blue;
 
         }
-       
+        .fcontainer .fitem .des {
+            padding-left: 50px;
+        }
+
+       .fcontainer .fitem .des .button1 {
+           background-color: yellow;
+           color: green;
+       }
+       .fcontainer .fitem .des .button1:hover {
+           background-color: green;
+           color: yellow;
+
+       }
     </style>
 </head>
 
@@ -151,7 +171,7 @@
                 alt="">
         </div>
         <ul>
-            <li class="item"><a href="a">Home</a></li>
+            <li class="item" ><a href="a">Home</a></li>
             <li class="item"><a href="a">Services</a></li>
             <li class="item"><a href="a">About Us</a></li>
             <li class="item"><a href="a">Contact Us</a></li>
@@ -179,20 +199,53 @@
     <div class="fcontainer">
         <div class="fitem">
      <img src="https://images.unsplash.com/photo-1552573102-2b44b44d85b5?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9" >
-    
-    
+        <div class="des">
+            <span> adidas</span>
+            <h2>Red jacket</h2>
+            <h3>&#9733;&#9733;&#9733;&#9733;&#9733;</h3>
+        
+        
+            <h4>Rs 1200</h4> 
+            <button class="button1">ADD TO CART</button>
+        
+        </div> 
         </div>
         <div class="fitem"> 
         <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464">
-
+        <div class="des">
+            <span> adidas</span>
+            <h2>Red jacket</h2>
+            <h3>&#9733;&#9733;&#9733;&#9733;&#9733;</h3>
+        
+        
+            <h4>Rs 1200</h4> 
+            <button class="button1">ADD TO CART</button>
+        </div>
         </div>
         <div class="fitem"> 
        <img src="https://images.unsplash.com/photo-1621072156002-e2fccdc0b176?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387">
-
+       <div class="des">
+        <span> adidas</span>
+        <h2>Red jacket</h2>
+        <h3>&#9733;&#9733;&#9733;&#9733;&#9733;</h3>
+    
+    
+        <h4>Rs 1200</h4> 
+        <button class="button1">ADD TO CART</button>
+        </div>
         </div>
         <div class="fitem"> 
         <img src="https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465>">    
-        </div>
+        <div class="des">
+            <span> adidas</span>
+            <h2>Red jacket</h2>
+            <h3>&#9733;&#9733;&#9733;&#9733;&#9733;</h3>
+        
+        
+            <h4>Rs 1200</h4> 
+            <button class="button1">ADD TO CART</button>
+    </div>
+    </div>
     
     
 
