@@ -1,32 +1,425 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShopKro</title>
     <style>
-          .container{
-              background-color:red;
+        #logo {
+            margin: 10px 34px;
         }
-        .box{
-            background-color:green;
+
+        #logo img {
+            height: 59px;
+            margin: 3px 6px;
+        }
+
+        #navbar {
+            display: flex;
+            align-items: center;
+            position: absolute;
+
+        }
+
+        #navbar ul {
+            display: flex;
+        }
+
+        #navbar::before {
+            content: "";
+
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+
+        }
+
+        #navbar ul li {
+            list-style: none;
+            font-size: 1.5rem;
+        }
+
+        #navbar ul li a {
+            color: white;
+            display: block;
+            padding: 3px 22px;
+            border-radius: 20px;
+            text-decoration: none;
+        }
+
+        #navbar ul li a:hover {
+            color: red;
+        }
+
+        #home {
+            display: flex;
+            flex-direction: column;
+            padding: 3px 200px;
+            height: 640px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #home::before {
+            content: "";
+            background: url('https://thumbs.dreamstime.com/b/wooden-blocks-online-shopping-symbols-shopping-cart-card-payment-delivery-truck-seller-over-internet-ecommerce-wooden-173711282.jpg') no-repeat center center/cover;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.8;
+        }
+
+        #home h1 {
+            color: black;
+            position: absolute;
+            top: 20%;
+            left: 55%;
+
+
+        }
+
+        #home p {
+            color: black;
+            position: absolute;
+            top: 35%;
+            left: 60%;
+            width: 350px;
+
+            font-size: 1.5rem;
+        }
+
+        #services {
+            display: flex;
+
+            top: 50px;
+
+
+        }
+
+        #services .box {
+
+            padding: 0px;
+            margin: 0px 6px;
+            border-radius: 20px;
+        }
+
+        #services .box img {
+            border: 3px solid rgb(196, 103, 103);
+
+            border-radius: 20px;
+            margin: 0px;
+            padding: 0px;
+            height: 300px;
+
+
+
+        }
+        #services .box  .des {
+            padding-left: 14px;
+        }
+
+        #services .box  .des .button1 {
+           background-color: yellow;
+           color: green;
+           border: 2px solid red;
+           border-radius: 10px;
+       }
+       #services .box  .des .button1:hover {
+           background-color: green;
+           color: yellow;
+
+       }
+
+        #services .box1 img {
+            border: 3px solid rgb(196, 103, 103);
+
+            border-radius: 20px;
+            margin: 0px;
+            padding: 0px;
+            height: 300px;
+        }
+
+
+        #services .box img:hover {
+
+
+            transition: all 0.1s ease-in-out;
+            transform: scale(1.4, 1.4);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .h-primary {
+            font-size: 2.2rem;
+            padding: 15px;
+            height: 1px;
+            align-items: center;
+        }
+
+        .h-me {
+            font-size: 3.3rem;
+            padding: 15px;
+            height: 1px;
+            align-items: center;
+        }
+
+        .h-secondary {
+            font-size: 2.2rem;
+            padding: 0px;
+        }
+
+        .btn {
+            padding: 6px 20px;
+            /* border: 2px solid red; */
+            background-color: red;
+            color: white;
+            margin: 17px;
+            font-size: 1.3rem;
+            border-radius: 10px;
+            position: absolute;
+            top: 70%;
+            left: 60%;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: green;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .item:hover {
+            background-color: grey;
+        }
+
+        .client-section {
+            height: 300px;
+
+        }
+
+        #clients {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        #clients img {
+            height: 120px;
+            padding: 70px;
+        }
+
+        .time {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid red;
+            background-color: blanchedalmond;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+
+        .time .money {
+            padding: 10px 100px;
+        }
+
+        .time .money .pat {
+            font-size: 1.5rem;
+        }
+
+        .time .money .pat:hover {
+            text-decoration: underline;
+        }
+
+        .time .money h3:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background: black;
+            color: white;
+            padding bottom: 0px;
         }
     </style>
 </head>
+
 <body>
-    <div class="container">
-<h1 class="box"> E-Commerce</h1>
-    </div>
-        <nav class="navbar">
+    <nav id="navbar">
         <div id="logo">
-            <ul>
-                <li class="item"><a href="a">Home</a></li>
-                <li class="item"><a href="a">Services</a></li>
-                <li class="item"><a href="a">About Us</a></li>
-                <li class="item"><a href="a">Contact Us</a></li>
-            </ul>
+            <img src="https://indian-retailer.s3.ap-south-1.amazonaws.com/s3fs-public/2021-03/e-commerce-definizione-cos-e.jpg"
+                alt="">
         </div>
+        <ul>
+            <li class="item"><a href="a">Home</a></li>
+            <li class="item"><a href="a">Services</a></li>
+            <li class="item"><a href="a">About Us</a></li>
+            <li class="item"><a href="a">Contact Us</a></li>
+        </ul>
+
     </nav>
+    <section id="home">
+        <h1 class="h-primary">Welcome to Shopchle</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, quod molestiae. Maiores, nisi! Sed, beatae,
+            tempora ducimus illo iusto dolores eos recusandae, vitae ad inventore libero adipisci corrupti soluta
+            voluptatum hic mollitia cupiditate vero?</p>
+        <button class="btn">Shop Now</button>
+    </section>
+
+    <section class="services-container">
+        <h1 class="h-primary center">Our Services</h1>
+        <div id="services">
+            <div class="box">
+                <img src="https://th.bing.com/th/id/OIP.0wwKckfYI2iVNyt0CQ2ZUQHaLH?pid=ImgDet&w=204&h=306&c=7&dpr=1.25"
+                    alt="">
+             
+                <div class="des">
+                    <span> adidas</span>
+                    <h2>Red jacket</h2>
+                    <h3>&#9733;&#9733;&#9733;&#9733;&#9733;</h3>
+                
+                
+                    <h4>Rs 1200</h4> 
+                    <button class="button1">ADD TO CART</button>
+                
+                </div> 
+            </div>
+            <div class="box">
+                <img src="https://i.pinimg.com/originals/7b/36/bc/7b36bc2880f5e4ec64ef732a532deb4c.jpg" alt="">
+                <!-- <h2 class="h-secondary">done dan</h2> -->
+                <div class="des">
+                    <span> adidas</span>
+                    <h2>Red jacket</h2>
+                    <h3>&#9733;&#9733;&#9733;&#9733;&#9733;</h3>
+                
+                
+                    <h4>Rs 1200</h4> 
+                    <button class="button1">ADD TO CART</button>
+                
+                </div> 
+            </div>
+            <div class="box">
+                <img src="https://th.bing.com/th/id/OIP.bR-H4uOT6NvWO5qqypuKVQHaJQ?pid=ImgDet&w=221&h=276&c=7&dpr=1.25"
+                    alt="">
+               
+                <div class="des">
+                    <span> adidas</span>
+                    <h2>Red jacket</h2>
+                    <h3>&#9733;&#9733;&#9733;&#9733;&#9733;</h3>
+                
+                
+                    <h4>Rs 1200</h4> 
+                    <button class="button1">ADD TO CART</button>
+                
+                </div> 
+            </div>
+            <div class="box">
+                <img src="https://th.bing.com/th/id/OIP.cqlsFj04tXVQoBTwGqeXvAHaJ4?pid=ImgDet&w=217&h=289&c=7&dpr=1.25"
+                    alt="">
+             
+                <div class="des">
+                    <span> adidas</span>
+                    <h2>Red jacket</h2>
+                    <h3>&#9733;&#9733;&#9733;&#9733;&#9733;</h3>
+                
+                
+                    <h4>Rs 1200</h4> 
+                    <button class="button1">ADD TO CART</button>
+                
+                </div> 
+            </div>
+            <div class="box">
+                <img src="https://th.bing.com/th/id/OIP.6vFfD2gP0DwIn9jYwSxuZwAAAA?pid=ImgDet&w=221&h=275&c=7&dpr=1.25"
+                    alt="">
+               
+                <div class="des">
+                    <span> adidas</span>
+                    <h2>Red jacket</h2>
+                    <h3>&#9733;&#9733;&#9733;&#9733;&#9733;</h3>
+                
+                
+                    <h4>Rs 1200</h4> 
+                    <button class="button1">ADD TO CART</button>
+                
+                </div> 
+            </div>
+            <div class="box">
+                <img src="https://th.bing.com/th/id/OIP.Mw7NZ-yYMTlWmqEVfsElTwHaI_?pid=ImgDet&w=221&h=267&c=7&dpr=1.25"
+                    alt="">
+               
+                <div class="des">
+                    <span> adidas</span>
+                    <h2>Red jacket</h2>
+                    <h3>&#9733;&#9733;&#9733;&#9733;&#9733;</h3>
+                
+                
+                    <h4>Rs 1200</h4> 
+                    <button class="button1">ADD TO CART</button>
+                
+                </div> 
+            </div>
+        </div>
+
+    </section>
+    <section id="client-section">
+        <h1 class="h-me center ">Our Clients </h1>
+        <div id="clients">
+            <div class="client-items">
+                <img src="https://www.bing.com/th?id=OIP.bLJ7lnRyeBuj3qxZG7acNgHaEK&w=333&h=187&c=8&rs=1&qlt=90&o=6&dpr=1.25&pid=3.1&rm=2"
+                    alt="">
+            </div>
+            <div class="client-items">
+                <img src="https://www.bing.com/th?id=OIP.8NGxjoamFPomSTDFDF1LeQHaHa&w=206&h=206&c=8&rs=1&qlt=90&o=6&dpr=1.25&pid=3.1&rm=2"
+                    alt="">
+            </div>
+            <div class="client-items">
+                <img src="https://www.bing.com/th?id=OIP.Aie-0i180j40AZ4nxYVG5AHaFj&w=288&h=216&c=8&rs=1&qlt=90&o=6&dpr=1.25&pid=3.1&rm=2"
+                    alt="">
+            </div>
+            <div class="client-items4">
+                <img src="https://th.bing.com/th/id/OIP.idB_-eo5pNgOG8Ker3jEpgHaEK?w=313&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"
+                    alt="">
+            </div>
+            <div class="client-items4">
+                <img src="https://th.bing.com/th/id/OIP.7MlOl5bNJwrsAYo-1SB0wAHaHl?w=167&h=180&c=7&r=0&o=5&dpr=1.25&pid=1.7"
+                    alt="">
+            </div>
+
+        </div>
+        <div class="time">
+            <div class="money">
+                <span class="pat">Contact</span>
+                <h3>Adress: Western Gate,Praygraj</h3>
+                <h3>Phone: +91 9170884138</h3>
+                <h3>Hours: 10.00-18.00, Mon-Sat</h3>
+                <h3> Follow Us</h3>
+            </div>
+
+            <div class="money">
+                <span class="pat">About</span>
+                <h3>About Us</h3>
+                <h3>Privacy Policy</h3>
+                <h3>Terms & Conditions</h3>
+                <h3>Contact Us</h3>
+            </div>
+            <div class="money">
+                <span class="pat">My Account</span>
+                <h3>Sign in</h3>
+                <h3>View Cart</h3>
+                <h3>My Wishlist</h3>
+                <h3>Track My Order</h3>
+            </div>
+        </div>
+        <footer>
+            <div class="center">
+                Copyright &copy; www.shopchal.com. All rights reserved
+            </div>
+        </footer>
+    </section>
 </body>
+
 </html>
